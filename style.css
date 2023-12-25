@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: justify;
+  background-color: wheat;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+header{
+  display: inline;
+}
+
+.wrapper {
+  width: 1100px;
+  margin: auto;
+  position: relative;
+}
+
+.logo a {
+  font-size: 50px;
+  font-weight: 600;
+  float: left;
+  width: 25%;
+  color: white;
+  margin: 0;
+}
+
+.menu {
+  float: right;
+  width: 75%;
+  margin: 0;
+  
+}
+
+nav {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  line-height: 45px;
+  padding: 7px;
+  position: sticky;
+  position: -webkit-sticky; 
+  top: 0;
+  background: rgb(14, 20, 46);
+  z-index: 1;
+  border-bottom:5px solid black;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav ul li {
+  float: left;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  padding: 0px 16px 0px 16px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.tombol-menu {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+
+.tombol-menu .garis {
+  height: 3px;
+  background-color: white;
+}
+
+@media screen and (max-width: 991.98px) {
+  .logo a {
+      display: inline;
+  }
+  .tombol-menu {
+      display: flex;
+  }
+  nav .menu {
+      display: none;
+  }
+  nav .menu.active {
+      display: flex;
+  }
+  nav ul li {
+      width:100%;
+      border-bottom:1px solid #333333;
+  }
+}
+
+input[type="checkbox"]{
+  position: relative;
+  width: 40px;
+  height: 20px;
+  appearance: none;
+  background-color: #434343;
+  outline: none;
+  border-radius: 10px;
+  transition: .5s ease;
+  cursor: pointer;
+  top: 0.5rem;
+}
+
+input[type="checkbox"]:checked{
+background-color: #3664ff;
+}
+
+input[type="checkbox"]::before{
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #fcfcfc;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: .5s ease;
+}
+
+input[type="checkbox"]:checked::before{
+  transform: translateX(20px);
+}
+
+/* body gelap */
+body.gelap{
+  background-color: black;
+  color: #fff ;
+}
+
+.gelap nav{
+  background-color: #333;
+}
+
+
+.gelap .card{
+  background-color: #333;
+}
+
+main{
+  padding: 30px 100px 60px 100px;
+  overflow: auto;
+}
+
+
+.container-fluid {
+    width: 100%;
+  }
+  .jumbotron {
+    background-image: url(assets/jumbotron1.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 440px;
+    position: relative;
+    
+  }
+  .jumbotron::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    position: absolute;
+    bottom: 0;
+  }
+  .jumbotron h1 {
+    color: #fff;
+    font-size: 80px;
+    text-align: center;
+    margin: 0px;
+    padding: 90px 0px 0px 0px;
+    text-shadow: 2px 6px 1px rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    position: relative;
+    font-weight: bold;
+  }
+
+  .jumbotron p{
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    position: relative;
+  }
+
+
+  .card{
+    box-shadow: 0px 4px 8px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 25px;
+    margin-top: 30px;
+    margin-right: 0px;
+    margin-left: 0px;
+    background-color: white;
+}
+
+.featured-image{
+  width: 90%;
+  max-height: 590px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+   margin-left: auto;
+   margin-right: auto;
+   border: 1px solid #333;
+   box-shadow:  0px 8px 12px 1px   #444;
+   padding: 8px 12px;
+   background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+
+}
+
+.profile img{
+  width: 200px;
+  width: 15em;
+  border: 1px solid #333;
+  box-shadow: 2px 1px 9px 2px  #444;
+  padding: 8px 12px;
+  background-image: linear-gradient(180deg, #fff, #ddd 40%, #ccc);
+}
+
+.profile header{
+  text-align: center;
+}
+
+
+
+@media screen and ( max-width: 1000px){
+    
+  aside{
+      
+      width: 100%;
+      padding: 0;
+      font-size: 10px;
+  }
+
+  main{
+    padding: 30px;
+    overflow: auto;
+  }
+   .logo a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    nav .menu {
+      width: 100%;
+      margin: 0;
+  }
+
+  nav .menu ul {
+      text-align: center;
+      margin: auto;
+      line-height: 40px;
+  }
+
+  nav .menu ul li {
+      display: inline-block;
+      float: none;
+  }
+  .jumbotron h1 {
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+    margin: 0px;
+    padding: 200px 0px 0px 0px;
+    text-shadow: 2px 6px 1px rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    position: relative;
+    font-weight: bold;
+  }
+
+  .jumbotron p{
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    position: relative;
+  }
+  .logo a {
+    font-size: 37px;
+  }
+  
+  }
+  
+  
+  footer{
+      padding: 20px;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      background-color:rgb(14, 20, 46); 
+      /*  background-color:rgb(23, 38, 254,0,5);
+      maka setelah (,) terakhir adalah untuk opacity(transparan). */
+  }
